@@ -18,7 +18,7 @@ fileHandler = QualityControlFileHandler("records", MTCHandler)
 fileHandler.download_all_records("2024-06-20T00:00:00", "2024-06-21T00:00:00")
 ```
 
-## Пример
+## Пример #1
 
 ``` python
 # main.py
@@ -42,3 +42,21 @@ fileHandler.download_all_records("2024-06-20T00:00:00", "2024-06-21T00:00:00")
 
 
 ```
+## Пример #2
+``` python
+import os
+from dotenv import load_dotenv
+
+from MTC.handler import MTCQualityControlHandler
+
+
+load_dotenv()
+
+# Инициализируем модуль взаимодействия с Контроль качества.API
+MTCHandler = MTCQualityControlHandler(os.environ.get("USER_LOGIN"), os.environ.get("USER_PASSWORD"))
+
+# Получить параметры стерео главного ТПО
+print(MTCHandler.get_stereo())
+
+```
+
