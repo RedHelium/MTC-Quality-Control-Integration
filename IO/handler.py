@@ -3,7 +3,7 @@ import os
 from MTC.handler import MTCQualityControlHandler
 
 
-class FileHandler:
+class QualityControlFileHandler:
     def __init__(self, directory_for_records, MTC: MTCQualityControlHandler) -> None:
         """
         Инициализация параметров для выгрузок тел. записей в файлы
